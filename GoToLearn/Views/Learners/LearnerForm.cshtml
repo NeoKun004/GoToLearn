@@ -1,0 +1,73 @@
+﻿@model GoToLearn.ViewModels.LearnerFormViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+@using (Html.BeginForm("Save", "Learners"))
+{
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Learner.Name)
+        @Html.TextBoxFor(m => m.Learner.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Learner.Name)
+    </div>
+
+      <div class="form-group">
+        @Html.LabelFor(m => m.Learner.Birthdate)
+        @Html.TextBoxFor(m => m.Learner.Birthdate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Learner.Birthdate)
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Learner.Sex)
+        @Html.TextBoxFor(m => m.Learner.Sex, new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Learner.Sex)
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Learner.Country)
+        @Html.TextBoxFor(m => m.Learner.Country, new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Learner.Country)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Learner.Level)
+        @Html.TextBoxFor(m => m.Learner.Level, new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Learner.Level)
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Learner.MembershipTypeId)
+       
+        @Html.ValidationMessageFor(l => l.Learner.MembershipTypeId)
+    </div>
+
+
+
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Learner.IsSubscribedToNewsletter) Subscribed to Newsletter?
+        </label>
+    </div>
+
+    
+    @Html.HiddenFor(l => l.Learner.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+
+
+}
+
+
+@section scripts
+{
+@Scripts.Render("~/bundles/jqueryval")    
+
+}

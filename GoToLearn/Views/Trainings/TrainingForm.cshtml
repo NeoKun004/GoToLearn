@@ -1,0 +1,44 @@
+﻿@model GoToLearn.ViewModels.TrainingFormViewModel
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2>@Model.Title</h2>
+
+@using (Html.BeginForm("Save", "Trainings"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Title)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.TrainingDate)
+        @Html.TextBoxFor(m => m.TrainingDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.TrainingDate)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FieldId)
+        @Html.DropDownListFor(m => m.FieldId, new SelectList(Model.Fields, "Id", "Name"), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FieldId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Duration)
+        @Html.TextBoxFor(m => m.Duration, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Duration)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Description)
+    </div>
+    @Html.HiddenFor(m => m.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

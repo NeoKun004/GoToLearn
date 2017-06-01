@@ -1,0 +1,53 @@
+﻿   
+        #local-video video {
+            max-width: 120px;
+            max-height: 120px;
+        }
+       
+        #remote-videos {
+        
+        }
+        #remote-videos video {
+            max-height: 80px;
+            float: left;
+            margin:10px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        #instant-messages {
+            overflow: auto;
+            min-height: 200px;
+            max-height: 200px;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.85);
+            color: #000;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        #instant-messages time {
+            color: #333;
+            margin-right: 10px;
+        }
+        #instant-messages mark {
+            color: #333;
+            background: none;
+            margin-right: 10px;
+        }
+        #fullscreen-video video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+        }
+        #chat-controls {
+      
+         
+        }
+      
+      

@@ -49,6 +49,10 @@ namespace GoToLearn.Models
     public class LoginViewModel
     {
         [Required]
+        [Display(Name = "Login")]
+        
+        public string UserName { get; set; }
+       // [Required]
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
@@ -64,6 +68,11 @@ namespace GoToLearn.Models
 
     public class RegisterViewModel
     {
+        [Required]
+       
+        [Display(Name = "Login")]
+        public string UserName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

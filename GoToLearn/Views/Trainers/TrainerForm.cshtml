@@ -1,0 +1,70 @@
+﻿@model GoToLearn2._0.ViewModels.TrainerFormViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Learner</h2>
+
+@using (Html.BeginForm("Save", "Trainers"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Trainer.Name)
+        @Html.TextBoxFor(m => m.Trainer.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Trainer.Name)
+    </div>
+
+   
+    <div class="form-group">
+        @Html.LabelFor(m => m.Trainer.Birthdate)
+        @Html.TextBoxFor(m => m.Trainer.Birthdate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Trainer.Birthdate)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Trainer.Sex)
+        @Html.TextBoxFor(m => m.Trainer.Sex, new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Trainer.Sex)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Trainer.Diploma)
+        @Html.TextBoxFor(m => m.Trainer.Diploma, new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Trainer.Diploma)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.FieldId)
+        @Html.DropDownListFor(m => m.FieldId, new SelectList(Model.Fields, "Id", "Name"), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FieldId)
+    </div>
+
+
+    
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Trainer.MembershipTypeId)
+        @Html.DropDownListFor(m => m.Trainer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(l => l.Trainer.MembershipTypeId)
+    </div>
+
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Trainer.IsSubscribedToNewsletter) Subscribed to Newsletter?
+        </label>
+    </div>
+
+
+    @Html.HiddenFor(l => l.Trainer.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+
+
+}
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

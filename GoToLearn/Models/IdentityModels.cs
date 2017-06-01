@@ -20,6 +20,13 @@ namespace GoToLearn.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Learner> Learners { get; set; }
+        public DbSet<Training> Trainings { get; set; }
+        public DbSet<MembershipType> MembershipTypes { get; set; }
+        public DbSet<Field> Fields { get; set; }
+        public DbSet<Trainer> Trainers { get; set; }
+        public DbSet<VideoConference> VideoConferences { get; set; }
+        public DbSet<ChatMessages> ChatMessages { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

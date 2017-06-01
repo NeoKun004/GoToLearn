@@ -1,0 +1,15 @@
+﻿@model GoToLearn.Models.Training
+
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Title</h2>
+<ul>
+    <li>Field: @Model.Field.Name</li>
+    <li>Training Date: @Model.TrainingDate.ToLongDateString()</li>
+    <li>Date Added: @Model.DateAdded.ToLongDateString()</li>
+    <li>Duration: @Model.Duration</li>
+    <li>>@Html.ActionLink("Join this training", "Index", "Video")</li>
+</ul>
