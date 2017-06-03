@@ -1,0 +1,152 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model GoToLearn.Models.RegisterViewModel
+   
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Trainer Register for GoTOLearn</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Event Register Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+    <script type="application/x-javascript">
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Meta tag Keywords -->
+    <!-- css files -->
+    <link rel="stylesheet" href="~/Style/css/Rstyle.css" type="text/css" media="all" /> <!-- Style-CSS -->
+    <link rel="stylesheet" href="~/Style/js/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+    <!-- //css files -->
+    <!-- js -->
+    <script type="text/javascript" src="~/Style/js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+</head>
+<body>
+    <script src="~/Style/js/jquery.vide.min.js"></script>
+    <!-- main -->
+    <div data-vide-bg="~/Style/video/Ipad">
+        <div class="center-container">
+            <div class="w3ls-header">
+                <div class="header-main">
+                    <h1>Register For GoToLearn</h1>
+                    <div class="header-bottom">
+                        <div class="header-right w3agile">
+                            <div class="header-left-bottom agileinfo">
+
+
+                                @using (Html.BeginForm("TrainerRegister", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="icon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        @Html.TextBoxFor(m =>m.UserName, new { @class = "form-control", placeholder = "Enter your Login", type = "email" })
+
+
+                                    </div>
+
+                                    <div class="icon1">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "E-Mail", type = "email" })
+
+                                    </div>
+
+                                    <div class="icon1">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+
+                                    </div>
+
+                                    <div class="icon1">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = " Confirm Password" })
+                                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="icon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = " Your first Name" })
+                                    </div>
+
+                                    <div class="icon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = " Your last Name" })
+                                    </div>
+                                    <div class="icon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        Male:   @Html.RadioButtonFor(m => m.Gender, "Male", new { @class = "form-control" })
+                                        Female: @Html.RadioButtonFor(m => m.Gender, "Female", new { @class = "form-control" })
+                                    </div>
+                                   
+                                     <div class="icon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        @Html.TextBoxFor(m => m.Birthdate, new { @class = "form-control", placeholder = " Your date of birth" })
+                                    </div>
+
+                                    <div class="icon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        @Html.TextBoxFor(m => m.Country, new { @class = "form-control", placeholder = " Your Country" })
+                                    </div>
+
+                                    <div class="icon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        @Html.TextBoxFor(m => m.FOE, new { @class = "form-control", placeholder = " Your Field of expertise" })
+                                    </div>
+
+                                    <div class="icon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        @Html.TextBoxFor(m => m.Diploma, new { @class = "form-control", placeholder = " Your Diploma" })
+                                    </div>
+                                    <div class="icon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        Pay As You Go :   @Html.RadioButtonFor(m => m.membershiptype, "Pay as you go", new { @class = "form-control" })
+                                        Monthly : @Html.RadioButtonFor(m => m.membershiptype, "Monthly", new { @class = "form-control" })
+                                       Quarterly : @Html.RadioButtonFor(m => m.membershiptype, "Quarterly", new { @class = "form-control" })
+                                        Annual : @Html.RadioButtonFor(m => m.membershiptype, "Annual", new { @class = "form-control" })
+                                    </div>
+
+
+                                    <div class="bottom">
+                                        <input type="submit" value="TrainerRegister" />
+                                    </div>
+
+
+                                }
+
+                                        
+
+
+
+
+
+
+
+
+                                        <div class="header-left-top">
+                                            <div class="sign-up"> <h2>or</h2> </div>
+
+                                        </div>
+                                        <div class="header-social wthree">
+                                            <ul>
+                                                <li><a href="#" class="f"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+                                                <li><a href="#" class="t"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+                                                <li><a href="#" class="g"><i class="fa fa-google-plus" aria-hidden="true"></i>Google+</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header end here-->
+            <!-- copyright start here -->
+            <div class="copyright">
+                <p>© 2017 GoToLearn</p>
+            </div>
+            <!--copyright end here-->
+        </div>
+    </div>
+</body>
+</html>

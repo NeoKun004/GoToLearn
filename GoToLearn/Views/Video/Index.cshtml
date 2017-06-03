@@ -59,13 +59,16 @@
             <div id="instant-messages">
                 &nbsp;
             </div>
-
-
-
             <div>
-                <div class="form-group">
+                <div class="input-group">
                     <input type="text" id="instant-message" placeholder="Enter a chat message" class="form-control">
+                    <span class="input-group-btn">
+                        <label class="btn btn-default btn-file">
+                            SHARE <input type="file" id="share-file" style="display: none;">
+                        </label>
+                    </span>
                 </div>
+
             </div>
 
         </div>
@@ -108,6 +111,36 @@
                 $(p).prepend(time);
                 $("#instant-messages").prepend(p);
             }
+            $("#share-file").on("change", function (evt) {
+                var file = evt.target.files[0];
+                var reader = new FileReader();
+                reader.onload = (function (theFile) {
+                    return function (buffer) {
+                        var bm = app.sendFile({
+                            name: file.name,
+                            size: file.size,
+                            type: file.type
+                        }, buffer.target.result);
+                    }
+                })(file);
+                reader.readAsArrayBuffer(file);
+            });
+            app.OnFileReceived = function (fileinfo, blob, buffer) {
+                var dt = new Date();
+                var p = $("<p>");
+                p.text("File received.");
+                var time = $("<time>");
+                time.text(dt.getHours().toString() + ":" + dt.getMinutes().toString());
+
+                var download = $("<a>");
+                download.attr("href", URL.createObjectURL(blob));
+                download.text(fileinfo.name);
+                download.attr("download", fileinfo.name);
+                $(p).append(download);
+                $(p).prepend(time);
+                $("#instant-messages").prepend(p);
+            };
+
             app.OnLocalStream = function (mediaStream) {}
             app.OnRemoteStream = function (mediaStream) {
                 var video = document.createElement("video");

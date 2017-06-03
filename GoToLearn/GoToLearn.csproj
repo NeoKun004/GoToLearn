@@ -261,6 +261,58 @@
     <Compile Include="Migrations\201705311735016_populateFieldUpdated.Designer.cs">
       <DependentUpon>201705311735016_populateFieldUpdated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706020808228_UpdateUserFields.cs" />
+    <Compile Include="Migrations\201706020808228_UpdateUserFields.Designer.cs">
+      <DependentUpon>201706020808228_UpdateUserFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706020824481_RemoveUserRole.cs" />
+    <Compile Include="Migrations\201706020824481_RemoveUserRole.Designer.cs">
+      <DependentUpon>201706020824481_RemoveUserRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706020831440_AddMembershipType.cs" />
+    <Compile Include="Migrations\201706020831440_AddMembershipType.Designer.cs">
+      <DependentUpon>201706020831440_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706020841225_AddMembershipType1.cs" />
+    <Compile Include="Migrations\201706020841225_AddMembershipType1.Designer.cs">
+      <DependentUpon>201706020841225_AddMembershipType1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706020845444_AddMembershipTypeupdated.cs" />
+    <Compile Include="Migrations\201706020845444_AddMembershipTypeupdated.Designer.cs">
+      <DependentUpon>201706020845444_AddMembershipTypeupdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706020851318_UserUpdated.cs" />
+    <Compile Include="Migrations\201706020851318_UserUpdated.Designer.cs">
+      <DependentUpon>201706020851318_UserUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706020855220_UserUpdated2.cs" />
+    <Compile Include="Migrations\201706020855220_UserUpdated2.Designer.cs">
+      <DependentUpon>201706020855220_UserUpdated2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706020901542_UserUpdated3.cs" />
+    <Compile Include="Migrations\201706020901542_UserUpdated3.Designer.cs">
+      <DependentUpon>201706020901542_UserUpdated3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021151292_ResetAll.cs" />
+    <Compile Include="Migrations\201706021151292_ResetAll.Designer.cs">
+      <DependentUpon>201706021151292_ResetAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021156109_ResetAll2.cs" />
+    <Compile Include="Migrations\201706021156109_ResetAll2.Designer.cs">
+      <DependentUpon>201706021156109_ResetAll2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021314031_ResetAll4.cs" />
+    <Compile Include="Migrations\201706021314031_ResetAll4.Designer.cs">
+      <DependentUpon>201706021314031_ResetAll4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021318064_ResetAll5.cs" />
+    <Compile Include="Migrations\201706021318064_ResetAll5.Designer.cs">
+      <DependentUpon>201706021318064_ResetAll5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706030717305_ReAddBirthdateToUser.cs" />
+    <Compile Include="Migrations\201706030717305_ReAddBirthdateToUser.Designer.cs">
+      <DependentUpon>201706030717305_ReAddBirthdateToUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chapter.cs" />
@@ -479,6 +531,16 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Style\css\Rstyle.css" />
+    <Content Include="Style\css\style.css" />
+    <Content Include="Style\images\arrow.png" />
+    <Content Include="Style\images\bg3.jpg" />
+    <Content Include="Style\images\mail.png" />
+    <Content Include="Style\images\pass.png" />
+    <Content Include="Style\js\font-awesome.css" />
+    <Content Include="Style\js\jquery-2.1.4.min.js" />
+    <Content Include="Style\js\jquery.vide.min.js" />
+    <Content Include="Style\video\Ipad.mp4" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -526,6 +588,16 @@
     <Content Include="Views\Trainings\ReadOnlyList.cshtml" />
     <Content Include="Views\Trainings\TrainingForm.cshtml" />
     <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Style\fonts\CinzelDecorative-Black.ttf" />
+    <Content Include="Style\fonts\CinzelDecorative-Bold.ttf" />
+    <Content Include="Style\fonts\CinzelDecorative-Regular.ttf" />
+    <Content Include="Style\fonts\fontawesome-webfont.eot" />
+    <Content Include="Style\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Style\fonts\fontawesome-webfont.woff" />
+    <Content Include="Style\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Style\fonts\FontAwesome.otf" />
+    <Content Include="Views\Account\TrainerRegister.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -560,6 +632,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705311735016_populateFieldUpdated.resx">
       <DependentUpon>201705311735016_populateFieldUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706020808228_UpdateUserFields.resx">
+      <DependentUpon>201706020808228_UpdateUserFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706020824481_RemoveUserRole.resx">
+      <DependentUpon>201706020824481_RemoveUserRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706020831440_AddMembershipType.resx">
+      <DependentUpon>201706020831440_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706020841225_AddMembershipType1.resx">
+      <DependentUpon>201706020841225_AddMembershipType1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706020845444_AddMembershipTypeupdated.resx">
+      <DependentUpon>201706020845444_AddMembershipTypeupdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706020851318_UserUpdated.resx">
+      <DependentUpon>201706020851318_UserUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706020855220_UserUpdated2.resx">
+      <DependentUpon>201706020855220_UserUpdated2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706020901542_UserUpdated3.resx">
+      <DependentUpon>201706020901542_UserUpdated3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021151292_ResetAll.resx">
+      <DependentUpon>201706021151292_ResetAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021156109_ResetAll2.resx">
+      <DependentUpon>201706021156109_ResetAll2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021314031_ResetAll4.resx">
+      <DependentUpon>201706021314031_ResetAll4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021318064_ResetAll5.resx">
+      <DependentUpon>201706021318064_ResetAll5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706030717305_ReAddBirthdateToUser.resx">
+      <DependentUpon>201706030717305_ReAddBirthdateToUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
