@@ -158,8 +158,17 @@ namespace GoToLearn.Controllers
                 var user = new ApplicationUser
                     {
                              UserName = model.UserName,
-                             Email = model.Email
-                    };
+                             Email = model.Email,
+                            FirstName = model.FirstName,
+                            LastName = model.LastName,
+                            Birthdate = model.Birthdate,
+                            Gender = model.Gender,
+                            Country = model.Country,
+                            membershipType = model.membershiptype,
+                            Level=model.Level
+
+
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

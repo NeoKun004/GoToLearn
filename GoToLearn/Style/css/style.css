@@ -62,7 +62,10 @@ body {/*--
 }
 /*--//header--*/
 /*--main--*/
-input[type="email"], input[type="password"] {
+
+
+
+input[type="email"],input[type="userfield"], input[type="password"] {
     width: 88%;
     padding: 15px 0px 15px 42px;
     border: 1px solid #fff;
@@ -72,7 +75,7 @@ input[type="email"], input[type="password"] {
     margin: 14px 0px;
     font-family: 'Roboto', sans-serif;
 }
-input[type="email"] {
+input[type="email"] ,input[type="userfield"] {
     background: url("../images/mail.png") no-repeat 10px 11px;
     background-size: 24px;
 }
@@ -324,7 +327,7 @@ input[type="submit"]:hover {
 	input[type="submit"] {
 		font-size: 17px;
 	}
-	input[type="email"], input[type="password"] {
+	input[type="email"],input[type="userfield"], input[type="password"] {
 		width: 86%;
 	}
 	.footer-w3l p {
@@ -348,7 +351,7 @@ input[type="submit"]:hover {
 		width: 41%;
 		margin-top: 9px;
 	}
-	input[type="email"], input[type="password"] {
+	input[type="email"],input[type="userfield"], input[type="password"] {
 		width: 84%;
 		padding: 13px 0px 13px 40px;
 		margin: 10px 0px;
@@ -395,7 +398,7 @@ input[type="submit"]:hover {
 		width: 83%;
 		padding: 10px 0px 10px 39px;
 	}
-	input[type="email"] {
+	input[type="email"],input[type="userfield"] {
 		background: url("../images/mail.png") no-repeat 9px 8px;
 		background-size: 22px;
 	}
@@ -467,7 +470,7 @@ input[type="submit"]:hover {
 	.footer-w3l {
 		padding: 0.7em;
 	}
-	input[type="email"], input[type="password"] {
+	input[type="email"],input[type="userfield"], input[type="password"] {
 		width: 82%;
 	}
 }
@@ -489,7 +492,7 @@ input[type="submit"]:hover {
 		width: 81%;
 		padding: 12px 0px 12px 38px;
 	}
-	input[type="email"] {
+	input[type="email"],input[type="userfield"] {
 		background: url("../images/mail.png") no-repeat 8px 9px;
 		background-size: 23px;
 	}

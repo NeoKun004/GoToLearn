@@ -50,4 +50,10 @@
          
         }
       
+         #btn-screenshare{
+           position: absolute;
+            top: 10px;
+            z-index: 100;
+            right:10px;
+        }
       
